@@ -37,7 +37,7 @@ AddEventHandler("playerConnecting", function(name, setKickReason, deferrals)
                             SendToDiscord(Storm.PlayerBan, "``StormBan > This player:`` **" ..name.."** ``tried to join your server Player Identifiers:`` **"..json.encode(PlayerIdentifier).. "**")
                         end 
                         print("^1[BANNED PLAYER] Player ^0"..name.."^1 tried to join your server ^0"..json.encode(PlayerIdentifier))
-                        deferrals.done("Storm Global Ban To Appeal Just visit https://skysales.xyz/.")
+                        deferrals.done("Storm Global Ban To Appeal Just visit https://discord.gg/qhX8eaN2fb.")
                         foundBan = true
                         break
                     end 
