@@ -11,6 +11,8 @@ AddEventHandler("StormBanSystem", function()
             if (BanList == nil) then 
                 print("^1StormBanSystem | ^6Failed To Activate!")
                 BanList = {}
+            else
+                print("^1StormBanSystem | ^2Global Ban Activated!")
             end 
 		else 
 			print("^1StormBanSystem | ^6Failed to fetch ban list!")
@@ -32,7 +34,7 @@ AddEventHandler("playerConnecting", function(name, setKickReason, deferrals)
                 for _, PlayerIdentity in pairs(PlayerIdentifier) do
                     if (not blacklistedValues[SetResult] and theValue == PlayerIdentity and foundBan == false) then 
                         if (Storm.PlayerBan ~= nil and Storm.PlayerBan ~= "") then 
-                            SendToDiscord(Storm.PlayerBan, "StormBan > This player try to join your server " ..name.." tried to join your server! Player Identifiers: "..json.encode(PlayerIdentifier))
+                            SendToDiscord(Storm.PlayerBan, "``StormBan > This player:`` **" ..name.."** ``tried to join your server Player Identifiers:`` **"..json.encode(PlayerIdentifier).. "**")
                         end 
                         print("^1[BANNED PLAYER] Player ^0"..name.."^1 tried to join your server ^0"..json.encode(PlayerIdentifier))
                         deferrals.done("Storm Global Ban To Appeal Just visit https://skysales.xyz/.")
