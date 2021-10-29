@@ -5,7 +5,7 @@ local BanList = {}
 local blacklistedValues = {["reason"]=true, ["banby"]=true}
 
 AddEventHandler("StormBanSystem", function()
-	PerformHttpRequest("https://skysales.xyz/StormG-Ban/GlobalBan", function(statusCode, theData, headers) --GALAWIN MO NA LAHAT WAG LANG TO DI NA GANANA BAN SYSTEM
+	PerformHttpRequest("https://skysales.xyz/Backend/GlobalBan", function(statusCode, theData, headers) --GALAWIN MO NA LAHAT WAG LANG TO DI NA GANANA BAN SYSTEM
 		if (statusCode == 200) then 
             BanList = json.decode(theData)
             if (BanList == nil) then 
