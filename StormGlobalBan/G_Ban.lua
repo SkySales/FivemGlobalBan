@@ -12,6 +12,7 @@ AddEventHandler("StormBanSystem", function()
                 print("^1StormBanSystem | ^6Failed To Activate!")
                 BanList = {}
             else
+		Wait(5000)
                 print("^1StormBanSystem | ^2Global Ban Activated!")
             end 
 		else 
